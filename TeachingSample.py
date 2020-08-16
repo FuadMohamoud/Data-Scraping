@@ -53,11 +53,12 @@ def search_num_of_pages(num_of_pages):
             print("No More items to search through")
             break
         time.sleep(2)
+        # Test for the Sign Up Modal, remove it
         try:
             remove_popup_modal = driver.find_element_by_xpath('//*[@id="popover-x"]/a')
             remove_popup_modal.click()
         except NoSuchElementException:
-            print('Good News, no annoying pop up modal!')
+            pass
         page_count +=1
     return jobs
 
