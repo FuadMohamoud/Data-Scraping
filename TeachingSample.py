@@ -1,5 +1,4 @@
 import time
-import json
 import pandas as pd
 
 from selenium import webdriver
@@ -23,7 +22,7 @@ def enter_search_items(job_to_search_for):
 
 def search_num_of_pages(num_of_pages):
     jobs = []
-    page_count = 0
+    page_count = 1
     while(page_count < num_of_pages):
         try:
             position_title = driver.find_elements_by_class_name('title')
